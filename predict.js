@@ -1,5 +1,6 @@
 
-const tf = require('./tf');
+const tf = require('@tensorflow/tfjs-node');
+
 const path = require('path')
 const fs = require('fs')
 const savedPath = path.resolve(__dirname, 'model/model.json')
@@ -7,7 +8,7 @@ const sharp = require('sharp');
 
 
 async function main() {
-  const pic_no = 5
+  const pic_no = 6
   const model = await tf.loadLayersModel(tf.io.fileSystem(savedPath))
   model.summary()
 
