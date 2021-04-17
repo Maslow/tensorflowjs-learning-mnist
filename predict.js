@@ -8,7 +8,7 @@ const sharp = require('sharp');
 
 
 async function main() {
-  const pic_no = 6
+  const pic_no = '6'
   const model = await tf.loadLayersModel(tf.io.fileSystem(savedPath))
   model.summary()
 
